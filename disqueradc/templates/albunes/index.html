@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} Disquera | Artistas {% endblock %}
+{% block title %} Disquera | Albunes {% endblock %}
 
 {% block contenido %}
 
-    <h1 class='text-center'> Artistas </h1>
+    <h1 class='text-center'> Albunes </h1>
     <div class="mb-2">
-        <a href="{% url 'artista-add' %}" class="btn btn-primary"><i class="bi bi-plus-circle"> Resgistrar Artista</i></a>
+        <a href="{% url 'albun-add' %}" class="btn btn-primary"><i class="bi bi-plus-circle"> Resgistrar Albunes</i></a>
     </div>
     <div class="table-responsive">
         <table class="table">
@@ -31,7 +31,7 @@
                 <td>Disquera</td>
                 <td>Estado</td>
                 <td>
-                    <a href='{% url 'artista-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
+                    <a href='{% url 'albun-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
                     <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
                 </td>
             </tbody>

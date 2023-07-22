@@ -5,17 +5,40 @@ from django.http import HttpResponse
 # def inicio(request):
 #     return HttpResponse('<h1>Bienvenido a la app</h1>')
 
-def index(request):
-    return render(request,'artistas/index.html')
+def inicio(request):
+    return render(request, 'base.html')
 
 def disquera(request):
-    return render(request,'disqueras.html')
+    return render(request, 'disqueras/index.html')
+def adddisquera(request):
+    return render(request, 'disqueras/crear.html')
+def editdisquera(request):
+    return render(request, 'disqueras/editar.html')
 
 def genero(request):
-    return render(request,'generos.html')
+    return render(request, 'generos/index.html')
+def addgenero(request):
+    return render(request, 'generos/crear.html')
+def editgenero(request):
+    return render(request, 'generos/editar.html')
 
+def artista(request):
+    return render(request, 'artistas/index.html')
 def addartista(request):
-    return render(request,'artistas/crear.html')
-
+    return render(request, 'artistas/crear.html')
 def editartista(request):
-    return render(request,'artistas/editar.html')
+    return render(request, 'artistas/editar.html')
+
+def albun(request):
+    return render(request, 'albunes/index.html')
+def addalbum(request):
+    return render(request, 'albunes/crear.html')
+def editalbun(request):
+    return render(request, 'albunes/editar.html')
+
+def cancion(request):
+    return render(request, 'canciones/index.html')
+def addcancion(request):
+    return render(request, 'canciones/crear.html')
+def editcancion(request):
+    return render(request, 'canciones/editar.html')
