@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Disqueras | Generos {% endblock  %}
+
+{% block contenido %}
+
+<h1 class='text-center'> Generos </h1>
+<div class="mb-2">
+    <a href="{% url 'artista-add' %}" class="btn btn-primary"><i class="bi bi-plus-circle"> Resgistrar Genero</i></a>
+</div>
+<div class="table-responsive">
+    <table class="table">
+        <thead class='table-dark'>
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Nombre <br> Genero</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbod class=''>
+            <td>ID</td>
+            <td>Foto</td>
+            <td>Nombre <br> Genero</td>
+            <td>Estado</td>
+            <td>
+                <a href='{% url 'artista-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
+                <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
+            </td>
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock  %}

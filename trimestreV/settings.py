@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'disquera_DC',
+    'disqueradc',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
