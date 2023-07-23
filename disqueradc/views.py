@@ -29,12 +29,12 @@ def addartista(request):
 def editartista(request):
     return render(request, 'artistas/editar.html')
 
-def albun(request):
-    return render(request, 'albunes/index.html')
+def album(request):
+    return render(request, 'albumes/index.html')
 def addalbum(request):
-    return render(request, 'albunes/crear.html')
-def editalbun(request):
-    return render(request, 'albunes/editar.html')
+    return render(request, 'albumes/crear.html')
+def editalbum(request):
+    return render(request, 'albumes/editar.html')
 
 def cancion(request):
     return render(request, 'canciones/index.html')

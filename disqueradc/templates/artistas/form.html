@@ -1,8 +1,49 @@
 <form enctype="multipart/form-data" methond="post">
 
     <div class="mb-3">
-        <label for="noDoc" class="form-label">No Documento</label>
-        <input type="number" class="form-control" id="noDoc">
+        <label for="noDocumento" class="form-label">Número Documento</label>
+        <input type="number" class="form-control" id="noDocumento">
+    </div>
+    <div class="mb-3">
+        <label for="tipoDocumento" class="form-label">Tipo Documento</label>
+        <select multiple class="form-select form-select-lg" name="" id="tipoDocumento">
+            <option>Cédula de cuidadanía</option>
+            <option>Tarjeta de identidad</option>
+            <option>Cédula extrangera</option>
+            <option>NUIP</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="nombreArtista" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombreArtista">
+    </div>
+    <div class="mb-3">
+        <label for="apellidoArtista" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellidoArtista">
+    </div>
+    <div class="mb-3">
+        <label for="nombreArtistico" class="form-label">Nombre Artístico</label>
+        <input type="text" class="form-control" id="nombreArtistico">
+    </div>
+    <div class="mb-3">
+        <label for="fNacimArtista" class="form-label">Fecha de nacimiento</label>
+        <input type="text" class="form-control" id="fNacimArtista">
+    </div>
+    <div class="mb-3">
+        <label for="emailArtista" class="form-label">Email</label>
+        <input type="text" class="form-control" id="emailArtista">
+    </div>
+    <div class="mb-3">
+        <label for="fotoArtista" class="form-label">Foto Artista</label>
+        <input type="text" class="form-control" id="fotoArtista">
+    </div>
+    <div class="mb-3">
+        <label for="estadoArtista" class="form-label">Estado Artista</label>
+        <input type="text" class="form-control" id="estadoArtista">
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Cancelar</button>
     </div>
 
 </form>

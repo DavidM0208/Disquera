@@ -16,9 +16,9 @@ urlpatterns = [
     path('artista/add', views.addartista, name='artista-add'),
     path('artista/edit', views.editartista, name='artista-edit'),
 
-    path('views/albunes', views.albun, name='albun'),
-    path('albunes/add', views.addalbum, name='albun-add'),
-    path('albunes/edit', views.editalbun, name='albun-edit'),
+    path('views/albumes', views.album, name='album'),
+    path('albumes/add', views.addalbum, name='album-add'),
+    path('albumes/edit', views.editalbum, name='album-edit'),
 
     path('views/canciones', views.cancion, name='cancion'),
     path('canciones/add', views.addcancion, name='cancion-add'),

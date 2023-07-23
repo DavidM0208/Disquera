@@ -21,13 +21,13 @@
                 <a class="nav-link" href="{% url 'disquera' %}">Disqueras</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'genero' %}">Generos</a>
+                <a class="nav-link" href="{% url 'genero' %}">Géneros</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'artista' %}">Artistas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'albun' %}">Albunes</a>
+                <a class="nav-link" href="{% url 'album' %}">Álbumes</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'cancion' %}">Canciones</a>
@@ -37,7 +37,12 @@
         </div>
       </nav>
       {% block contenido %} 
-      <h1 class='text-center'>¡Bienvenido!</h1>
+      <h1 class='text-center'>¡Bienvenido a la Disquera!</h1>
+      {% include "disqueras/tabla.html" %}
+      {% include "generos/tabla.html" %}
+      {% include "artistas/tabla.html" %}
+      {% include "albumes/tabla.html" %}
+      {% include "canciones/tabla.html" %}
       {% endblock  %}
 
       <footer>
