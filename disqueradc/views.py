@@ -8,6 +8,9 @@ from django.http import HttpResponse
 def inicio(request):
     return render(request, 'base.html')
 
+def save(request):
+    return render()
+
 def disquera(request):
     return render(request, 'disqueras/index.html')
 def adddisquera(request):
