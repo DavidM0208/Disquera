@@ -11,27 +11,33 @@
                     <th>ID <br> Álbum</th>
                     <th>Nombre <br> Álbum</th>
                     <th>Año <br> Publicación</th>
-                    <th>Foto <br> Álbum</th>
-                    <th>Estado <br> Álbum</th>
                     <th>Artista</th>
                     <th>Género</th>
+                    <th>Foto <br> Álbum</th>
+                    <th>Estado <br> Álbum</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
 
             <tbod class=''>
-                <td>ID <br> Álbum</td>
-                <td>Nombre <br> Álbum</td>
-                <td>Año <br> Publicación</td>
-                <td>Foto <br> Álbum</td>
-                <td>Estado <br> Álbum</td>
-                <td>Artista</td>
-                <td>Género</td>
+                
+        {% for al in album %}
+            <tr>
+                <td>{{ al.idAlbum}}</td>
+                <td>{{ al.nombreAlbum }}</td>
+                <td>{{ al.anioPublicacion }}</td>
+                <td>{{ al.idArtistaFK.nombreArtista }}</td>
+                <td>{{ al.idGeneroFk.nombreGenero }}</td>
+                <td><img src="{{ al.fotoAlbum.url }}" width="100px" heith="100px"></td>
+                <td>{{ al.estadoAlbum }}</td>
                 <td>
                     <a href="{% url 'album-add' %}" class="btn btn-primary" style="margin-bottom:0.3rem; padding:0.4rem 1rem;"><i class="bi bi-plus-circle"> Resgistrar Álbumes</i></a> <br>
                     <a href='{% url 'album-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
                     <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
                 </td>
+            </tr>
+        {% endfor %}
+
             </tbody>
         </table>
 

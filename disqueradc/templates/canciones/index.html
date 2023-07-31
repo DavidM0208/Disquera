@@ -11,23 +11,27 @@
                 <th>ID <br> Canción</th>
                 <th>Nombre <br> Canción</th>
                 <th>Duracción <br> Canción</th>
-                <th>Estado <br> Cancción</th>
                 <th>Álbum</th>
+                <th>Estado <br> Cancción</th>
                 <th>Acciones</th>
             </tr>
         </thead>
 
         <tbod class=''>
-            <td>ID <br> Canción</td>
-            <td>Nombre <br> Canción</td>
-            <td>Duracción <br> Canción</td>
-            <td>Estado <br> Cancción</td>
-            <td>Álbum</td>
+    {% for c in canciones %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombreCancion }}</td>
+            <td>{{ c.duracionCancion }}</td>
+            <td>{{ c.idAlbumFK.nombreAlbum }}</td>
+            <td>{{ c.estadoCancion }}</td>
             <td>
                 <a href="{% url 'cancion-add' %}" class="btn btn-primary" style="margin-bottom:0.3rem"><i class="bi bi-plus-circle"> Resgistrar Canciones</i></a> <br>
                 <a href='{% url 'cancion-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
                 <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
             </td>
+        </tr>
+    {% endfor %}
         </tbody>
     </table>
 

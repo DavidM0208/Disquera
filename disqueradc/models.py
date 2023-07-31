@@ -10,6 +10,10 @@ class Disquera(models.Model):
     direccionDisquera=models.CharField(max_length=100)
     estadoDisquera=models.BooleanField()
 
+    def __str__(self):
+        row = "Disquera = " + self.nombreDisquera
+        return row 
+
 class Artista(models.Model):
     id=models.AutoField(primary_key=True)
     noDocumento=models.CharField(max_length=20)
@@ -23,10 +27,18 @@ class Artista(models.Model):
     idDisqueraFK=models.ForeignKey(Disquera,on_delete=models.CASCADE)
     estadoArtista=models.BooleanField()
 
+    def __srt__(self):
+        row = "Artista = " + self.nombreArtistico
+        return row
+
 class Genero(models.Model):
     id=models.AutoField(primary_key=True)
     nombreGenero=models.CharField(max_length=50)
     estadoGenero=models.BooleanField()
+
+    def __srt__(self):
+        row ="Genero = " + self.nombreGenero
+        return row
 
 class Album(models.Model):
     id=models.AutoField(primary_key=True)
@@ -37,9 +49,15 @@ class Album(models.Model):
     fotoAlbum=models.ImageField(upload_to='imagenes/', null=True, blank=True)
     estadoAlbum=models.BooleanField()
 
+    def __srt__(self):
+        row = "Album = " + self.nombreAlbum
+
 class Cancion(models.Model):
     id=models.AutoField(primary_key=True)
     nombreCancion=models.CharField(max_length=100)
-    duracionCancion=models.IntegerField()
+    duracionCancion=models.TimeField(null=True, blank=True)
     idAlbumFK=models.ForeignKey(Album,on_delete=models.CASCADE)
     estadoCancion=models.BooleanField()
+
+    def __srt__(self):
+        row ="Cancion = " + self.nombreCancion

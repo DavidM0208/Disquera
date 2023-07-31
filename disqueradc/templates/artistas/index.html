@@ -17,27 +17,35 @@
                     <th>Fecha <br> Nacimiento</th>
                     <th>Email</th>
                     <th>Foto</th>
+                    <th>Disquera</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
 
             <tbod class=''>
-                <td>ID <br> Artista</td>
-                <td>Número <br> Documeto</td>
-                <td>Tipo <br> Documeto</td>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>Nombre <br> Artístico</td>
-                <td>Fecha <br> Nacimiento</td>
-                <td>Email</td>
-                <td>Foto</td>
-                <td>Estado</td>
+
+        {% for a in artistas %}
+        
+            <tr>
+                <td>{{ a.id }}</td>
+                <td>{{ a.noDocumento }}</td>
+                <td>{{ a.tipoDocumento }}</td>
+                <td>{{ a.nombreArtista }}</td>
+                <td>{{ a.apellidoArtista }}</td>
+                <td>{{ a.nombreArtistico }}</td>
+                <td>{{ a.fNacimArtista }}</td>
+                <td>{{ a.emailArtista }}</td>
+                <td><img src="{{ a.fotoArtista.url }}" width="100px" heith="100px"></td>
+                <td>{{ a.idDisqueraFK.nombreDisquera}}</td>
+                <td>{{ a.estadoArtista }}</td>
                 <td>
                     <a href="{% url 'artista-add' %}" class="btn btn-primary" style="margin-bottom:0.3rem; padding:0.4rem 1.4rem"><i class="bi bi-plus-circle"> Resgistrar Artista</i></a> <br>
                     <a href='{% url 'artista-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
                     <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
                 </td>
+            </tr>
+        {% endfor %}
             </tbody>
         </table>
 

@@ -10,6 +10,7 @@
 <div class="table-responsive" style="margin: 1rem 0.5rem; border-radius:5px;">
     <table class="table">
         <thead class='table-dark'>
+            
             <tr>
                 <th>ID <br> Disquera</th>
                 <th>Nit <br> Disquera</th>
@@ -22,17 +23,25 @@
         </thead>
 
         <tbod class=''>
-            <td>ID</td>
-            <td>Nit <br> Disquera</td>
-            <td>Nombre <br> Disquera</td>
-            <td>Teléfono <br> Disquera</td>
-            <td>Dirección <br> Disquera</td>
-            <td>Estado <br> Disquera</td>
-            <td>
-                <a href="{% url 'disquera-add' %}" class="btn btn-primary" style="margin-bottom:0.3rem; padding:0.4rem 1rem;"><i class="bi bi-plus-circle"> Resgistrar Disquera</i></a> <br>
-                <a href='{% url 'disquera-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
-                <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
-            </td>
+
+        {% for d in disqueras %}
+
+            <tr>
+                <td>{{ d.id }}</td>
+                <td>{{ d.nitDisquera }}</td>
+                <td>{{ d.nombreDisquera }}</td>
+                <td>{{ d.telefonoDisquera }}</td>
+                <td>{{ d.direccionDisquera }}</td>
+                <td>{{ d.estadoDisquera }}</td>
+                <td>
+                    <a href="{% url 'disquera-add' %}" class="btn btn-primary" style="margin-bottom:0.3rem; padding:0.4rem 1rem;"><i class="bi bi-plus-circle"> Resgistrar Disquera</i></a> <br>
+                    <a href='{% url 'disquera-edit' %}' class='btn btn-warning'><i class="bi bi-pencil">Editar</i></a>
+                    <a href='' class='btn btn-danger'><i class="bi bi-trash">Eliminar</i></a>
+                </td>
+            </tr>
+
+        {% endfor %}
+
         </tbody>
     </table>
 
